@@ -92,6 +92,9 @@
 
       var personalities = new WeightedList(this.data["Personalities"]);
       var personality = personalities.pick(hash.hash_index(4), 255);
+
+      var accessories = new WeightedList(this.data["Accessories"]);
+      var accessory = accessories.pick(hash.hash_index(5), 255);
       
       return {
         name: given_name,
@@ -100,7 +103,7 @@
         weapon: weapon,
         familiar: familiar,
         personality: personality,
-        accessories: "Scarf"
+        accessories: accessory
       };
     }
   };
