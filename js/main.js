@@ -13,6 +13,8 @@
     };
   };
   
+  // Keep an array with weighted values. Each object should have a name key
+  // and a weight key.
   var WeightedList = function (rawList) {
     this.list = {};
     this.weightsTotal = 0;
@@ -38,36 +40,55 @@
     };
   };
   
-  // Filter a list by the nation in the nations array 
-  var nationFilter = function (list, nation) {
-    var newList = [];
-    
-    for (var i = 0; i < list.length; i++) {
-      var item = list[i];
-      
-      if (item.nations.indexOf(nation) !== -1) {
-        newList.push(item);
-      }
-    }
-    
-    return newList;
-  };
-  
   var WitchGen = {
+    loadData: function (data) {
+      this.data = data;
+    },
+
+    // Parse the source data. This function is dependent on the source
+    // data hierarchy…
+    parseSource: function () {
+      this.mappings = {};
+      _.each(this.data, function (nation) {
+        this.mappings[nation["name"]] = nation;
+      }, this);
+
+      this.nations = _.map(this.mappings, function (nation, key) {
+        return {
+          name: nation["name"],
+          weight: nation["weight"]
+        };
+      });
+    },
+
+    // Parse list items from a nation
+    arrayToObjects: function (array) {
+      return _.map(array, function (item) {
+        return {
+          name: item,
+          weight: 1
+        };
+      });
+    },
+
     generate: function (given_name) {
+      this.parseSource();
       var hash = new NameHash(given_name.toLowerCase());
       
-      var nations = new WeightedList(Data.nations);
+      var nations = new WeightedList(this.nations);
       var nation = nations.pick(hash.hash_index(0), 255);
       
-      var strikers = new WeightedList(nationFilter(Data.strikers, nation));
+      var strikers = new WeightedList(this.arrayToObjects(this.mappings[nation]["strikers"]));
       var striker = strikers.pick(hash.hash_index(1), 255);
+
+      var weapons = new WeightedList(this.arrayToObjects(this.mappings[nation]["weapons"]));
+      var weapon = weapons.pick(hash.hash_index(2), 255);
       
       return {
         name: given_name,
         nation: nation,
         striker: striker,
-        weapon: "Erma EMP-35",
+        weapon: weapon,
         familiar: "Rhodesian Ridgeback",
         personality: "Hasty",
         accessories: "Scarf"
@@ -105,7 +126,7 @@
 $(document).ready(function() {
   $("#generator").on("submit", function (e) {
     e.preventDefault();
-    
+    WitchGen.loadData(Data["Nations"]);
     var witch = WitchGen.generate( $("#inputName").val() );
     DisplayWitch( $("#results"), witch );
     return false;
