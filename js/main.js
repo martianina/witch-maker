@@ -48,8 +48,11 @@
     // Parse the source data. This function is dependent on the source
     // data hierarchy…
     parseSource: function () {
+      // Nation data contains nations, strikers, weapons
+      var nationData = this.data["Nations"];
+
       this.mappings = {};
-      _.each(this.data, function (nation) {
+      _.each(nationData, function (nation) {
         this.mappings[nation["name"]] = nation;
       }, this);
 
@@ -83,13 +86,16 @@
 
       var weapons = new WeightedList(this.arrayToObjects(this.mappings[nation]["weapons"]));
       var weapon = weapons.pick(hash.hash_index(2), 255);
+
+      var familiars = new WeightedList(this.arrayToObjects(this.data["Familiars"]));
+      var familiar = familiars.pick(hash.hash_index(3), 255);
       
       return {
         name: given_name,
         nation: nation,
         striker: striker,
         weapon: weapon,
-        familiar: "Rhodesian Ridgeback",
+        familiar: familiar,
         personality: "Hasty",
         accessories: "Scarf"
       };
@@ -126,7 +132,8 @@
 $(document).ready(function() {
   $("#generator").on("submit", function (e) {
     e.preventDefault();
-    WitchGen.loadData(Data["Nations"]);
+
+    WitchGen.loadData(Data);
     var witch = WitchGen.generate( $("#inputName").val() );
     DisplayWitch( $("#results"), witch );
     return false;
