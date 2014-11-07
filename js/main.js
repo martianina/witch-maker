@@ -39,61 +39,76 @@
       }
     };
   };
-  
-  var WitchGen = {
-    loadData: function (data) {
-      this.data = data;
-      this.parseSource();
-    },
 
-    // Parse the source data. This function is dependent on the source
-    // data hierarchy…
-    parseSource: function () {
-      // Nation data contains nations, strikers, weapons
-      var nationData = this.data["Nations"];
-
-      this.mappings = {};
-      this.strikers = {};
-      this.weapons = {};
-
-      _.each(nationData, function (nation) {
-        this.mappings[nation["name"]] = nation;
-        this.strikers[nation["name"]] = new WeightedList(this.arrayToObjects(nation["strikers"]));
-        this.weapons[nation["name"]] = new WeightedList(this.arrayToObjects(nation["weapons"]));
-      }, this);
-
-      var nations = _.map(this.mappings, function (nation, key) {
-        return {
-          name: nation["name"],
-          weight: nation["weight"]
-        };
-      });
-
-      this.nations = new WeightedList(nations);
-      this.familiars = new WeightedList(this.arrayToObjects(this.data["Familiars"]));
-      this.personalities = new WeightedList(this.data["Personalities"]);
-      this.accessories = new WeightedList(this.data["Accessories"]);
-    },
-
-    // Parse list items from a nation
-    arrayToObjects: function (array) {
+  // Convert input data into a specific format. Result:
+  // {
+  //   accessories: [WeightedList],
+  //   familiars: [WeightedList],
+  //   nations: [WeightedList],
+  //   personalities: [WeightedList],
+  //   strikers: {
+  //     nations[0]: [WeightedList],
+  //     nations[1]: [WeightedList],
+  //     ...
+  //   },
+  //   weapons: {
+  //     nations[0]: [WeightedList],
+  //     nations[1]: [WeightedList],
+  //     ...
+  //   }
+  // }
+  var SourceParser = function (source) {
+    // Convert an array of items into an array of objects for WeightedList
+    var arrayToObjects = function (array) {
       return _.map(array, function (item) {
         return {
           name: item,
           weight: 1
         };
       });
+    };
+
+    var nations = _.collect(source["Nations"], function (nation) {
+      return {
+          name: nation["name"],
+          weight: nation["weight"]
+      };
+      });
+
+    var nationStrikers = {};
+    _.each(source["Nations"], function (nation) {
+        nationStrikers[nation["name"]] = new WeightedList(arrayToObjects(nation["strikers"]));
+      });
+
+    var nationWeapons = {};
+    _.each(source["Nations"], function (nation) {
+        nationWeapons[nation["name"]] = new WeightedList(arrayToObjects(nation["weapons"]));
+      });
+
+    return {
+      accessories: new WeightedList(source["Accessories"]),
+      familiars: new WeightedList(arrayToObjects(source["Familiars"])),
+      nations: new WeightedList(nations),
+      personalities: new WeightedList(source["Personalities"]),
+      strikers: nationStrikers,
+      weapons: nationWeapons
+    };
+  };
+  
+  var WitchGen = {
+    loadData: function (data) {
+      this.data = SourceParser(data);
     },
 
     generate: function (given_name) {
       var hash = new NameHash(given_name.toLowerCase());
       
-      var nation = this.nations.pick(hash.hash_index(0), 255);
-      var striker = this.strikers[nation].pick(hash.hash_index(1), 255);
-      var weapon = this.weapons[nation].pick(hash.hash_index(2), 255);
-      var familiar = this.familiars.pick(hash.hash_index(3), 255);
-      var personality = this.personalities.pick(hash.hash_index(4), 255);
-      var accessory = this.accessories.pick(hash.hash_index(5), 255);
+      var nation = this.data.nations.pick(hash.hash_index(0), 255);
+      var striker = this.data.strikers[nation].pick(hash.hash_index(1), 255);
+      var weapon = this.data.weapons[nation].pick(hash.hash_index(2), 255);
+      var familiar = this.data.familiars.pick(hash.hash_index(3), 255);
+      var personality = this.data.personalities.pick(hash.hash_index(4), 255);
+      var accessory = this.data.accessories.pick(hash.hash_index(5), 255);
       
       return {
         name: given_name,
@@ -135,10 +150,11 @@
 
 /* init code */
 $(document).ready(function() {
+  WitchGen.loadData(Data);
+
   $("#generator").on("submit", function (e) {
     e.preventDefault();
 
-    WitchGen.loadData(Data);
     var witch = WitchGen.generate( $("#inputName").val() );
     DisplayWitch( $("#results"), witch );
     return false;
