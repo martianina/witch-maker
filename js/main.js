@@ -7,23 +7,70 @@
     this.hash = md5(given_name);
     
     this.hash_index = function (i) {
-      var str = this.hash.slice(2 * i, 2);
+      var offset = 2 * i;
+      var str = this.hash.slice(offset, offset + 2);
       return parseInt(str, 16);
     };
   };
   
+  var WeightedList = function (rawList) {
+    this.list = {};
+    this.weightsTotal = 0;
+    
+    // Iterate through the array, and assign the weight to each item
+    for (var i = 0; i < rawList.length; i++) {
+      var item = rawList[i];
+      this.weightsTotal += item.weight;
+      this.list[item.name] = this.weightsTotal;
+    }
+    
+    // Traverse the array in O(n) to find the closest weighted item
+    this.pick = function (index, upper) {
+      var r = this.weightsTotal * index / upper;
+      
+      for (var key in this.list) {
+        if (this.list.hasOwnProperty(key)) {
+          if (r <= this.list[key]) {
+            return key;
+          }
+        }
+      }
+    };
+  };
+  
+  // Filter a list by the nation in the nations array 
+  var nationFilter = function (list, nation) {
+    var newList = [];
+    
+    for (var i = 0; i < list.length; i++) {
+      var item = list[i];
+      
+      if (item.nations.indexOf(nation) !== -1) {
+        newList.push(item);
+      }
+    }
+    
+    return newList;
+  };
+  
   var WitchGen = {
     generate: function (given_name) {
-      var hash = new NameHash(given_name);
+      var hash = new NameHash(given_name.toLowerCase());
+      
+      var nations = new WeightedList(Data.nations);
+      var nation = nations.pick(hash.hash_index(0), 255);
+      
+      var strikers = new WeightedList(nationFilter(Data.strikers, nation));
+      var striker = strikers.pick(hash.hash_index(1), 255);
       
       return {
         name: given_name,
-        nation: "Imperial Karlsland",
-        striker: "Messerschmitt Me 163",
-        weapon: "Mondragón rifle",
-        familiar: "Stoat",
-        personality: "Jolly",
-        accessories: "N/A"
+        nation: nation,
+        striker: striker,
+        weapon: "Erma EMP-35",
+        familiar: "Rhodesian Ridgeback",
+        personality: "Hasty",
+        accessories: "Scarf"
       };
     }
   };
@@ -40,6 +87,7 @@
   var DisplayWitch = function ($container, witch) {
     $container.removeClass("hide");
     var $list = $container.children("p");
+    $list.empty();
     
     $list.append( listItem("Name", witch.name) );
     $list.append( listItem("Nation", witch.nation) );
