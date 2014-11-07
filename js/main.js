@@ -78,23 +78,12 @@
       this.parseSource();
       var hash = new NameHash(given_name.toLowerCase());
       
-      var nations = new WeightedList(this.nations);
-      var nation = nations.pick(hash.hash_index(0), 255);
-      
-      var strikers = new WeightedList(this.arrayToObjects(this.mappings[nation]["strikers"]));
-      var striker = strikers.pick(hash.hash_index(1), 255);
-
-      var weapons = new WeightedList(this.arrayToObjects(this.mappings[nation]["weapons"]));
-      var weapon = weapons.pick(hash.hash_index(2), 255);
-
-      var familiars = new WeightedList(this.arrayToObjects(this.data["Familiars"]));
-      var familiar = familiars.pick(hash.hash_index(3), 255);
-
-      var personalities = new WeightedList(this.data["Personalities"]);
-      var personality = personalities.pick(hash.hash_index(4), 255);
-
-      var accessories = new WeightedList(this.data["Accessories"]);
-      var accessory = accessories.pick(hash.hash_index(5), 255);
+      var nation = this.pickNation(hash);
+      var striker = this.pickStriker(hash, this.mappings[nation]["strikers"]);
+      var weapon = this.pickWeapon(hash, this.mappings[nation]["weapons"]);
+      var familiar = this.pickFamiliar(hash, this.data["Familiars"]);
+      var personality = this.pickPersonality(hash, this.data["Personalities"]);
+      var accessory = this.pickAccessory(hash, this.data["Accessories"]);
       
       return {
         name: given_name,
@@ -105,7 +94,37 @@
         personality: personality,
         accessories: accessory
       };
-    }
+    },
+
+    pickNation: function (hash) {
+      var nations = new WeightedList(this.nations);
+      return nations.pick(hash.hash_index(0), 255);
+    },
+
+    pickStriker: function (hash, list) {
+      var strikers = new WeightedList(this.arrayToObjects(list));
+      return strikers.pick(hash.hash_index(1), 255);
+    },
+
+    pickWeapon: function (hash, list) {
+      var weapons = new WeightedList(this.arrayToObjects(list));
+      return weapons.pick(hash.hash_index(2), 255);
+    },
+
+    pickFamiliar: function (hash, list) {
+      var familiars = new WeightedList(this.arrayToObjects(list));
+      return familiars.pick(hash.hash_index(3), 255);
+    },
+
+    pickPersonality: function (hash, list) {
+      var personalities = new WeightedList(list);
+      return personalities.pick(hash.hash_index(4), 255);
+    },
+
+    pickAccessory: function (hash, list) {
+      var accessories = new WeightedList(list);
+      return accessories.pick(hash.hash_index(5), 255);
+    } 
   };
   
   window.WitchGen = WitchGen;
