@@ -1,6 +1,6 @@
 var Data = {};
 
-Data["Nations"] = [
+Data.Nations = [
 {
   "name": "Australia",
   "weight": 5,
@@ -618,7 +618,7 @@ Data["Nations"] = [
 }
 ];
 
-Data["Familiars"] = [
+Data.Familiars = [
   "Ankara Cat",
   "Arabian Camel",
   "Badger",
@@ -723,7 +723,7 @@ Data["Familiars"] = [
   "Zebra"
 ];
 
-Data["Personalities"] = [
+Data.Personalities = [
 {
   "name": "Absent-minded",
   "weight": 1
@@ -885,7 +885,7 @@ Data["Personalities"] = [
   "weight": 1
 }];
 
-Data["Accessories"] = [
+Data.Accessories = [
 {
   "name": "N/A",
   "weight": 75
