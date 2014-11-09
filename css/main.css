@@ -6,4 +6,19 @@
 
 body {
 	padding-bottom: 10em;
+	color: #EEE;
+	background-color: #111;
+}
+
+.jumbotron {
+	background-color: #333;
+}
+
+.navbar a {
+	color: #EFE;
+	text-shadow: none;
+}
+
+.nav>li>a:hover {
+	background-color: #333;
 }
