@@ -4,7 +4,7 @@ This page takes an input name and generates a deterministic output of [witch](ht
 
 ## Use It
 
-[The site is live on Github Pages.](http://thewayofway.github.io/witch-maker/)
+[The site is live on Github Pages.](https://thewayofway.github.io/witch-maker/)
 
 Existing site on Heroku will instruct users to go to that site.
 
