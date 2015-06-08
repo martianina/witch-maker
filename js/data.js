@@ -1,7 +1,6 @@
 var Data = {};
 
-Data.Nations = [
-{
+Data.Nations = [{
   "name": "Australia",
   "weight": 5,
   "strikers": [
@@ -24,8 +23,7 @@ Data.Nations = [
     "Owen submachine gun",
     "Sten"
   ]
-},
-{
+}, {
   "name": "Baltland",
   "weight": 1,
   "strikers": [
@@ -62,8 +60,7 @@ Data.Nations = [
     "M/29",
     "Madsen M/22"
   ]
-},
-{
+}, {
   "name": "Belgium",
   "weight": 1,
   "strikers": [
@@ -82,8 +79,7 @@ Data.Nations = [
     "MG 08",
     "Sten"
   ]
-},
-{
+}, {
   "name": "Britannia",
   "weight": 15,
   "strikers": [
@@ -131,8 +127,7 @@ Data.Nations = [
     "Vickers K",
     "Boys .55 AT Rifle"
   ]
-},
-{
+}, {
   "name": "Bulgaria",
   "weight": 0.3333,
   "strikers": [
@@ -148,8 +143,7 @@ Data.Nations = [
     "MP 40",
     "Suomi KP/-31"
   ]
-},
-{
+}, {
   "name": "Farawayland",
   "weight": 5,
   "strikers": [
@@ -179,8 +173,7 @@ Data.Nations = [
     "Thompson M1928",
     "Thompson SMG"
   ]
-},
-{
+}, {
   "name": "Fuso Empire",
   "weight": 15,
   "strikers": [
@@ -212,8 +205,7 @@ Data.Nations = [
     "Type 97 LMG",
     "Type 99 LMG"
   ]
-},
-{
+}, {
   "name": "Gallia",
   "weight": 5,
   "strikers": [
@@ -249,8 +241,7 @@ Data.Nations = [
     "Reibel Machine Gun",
     "Boys .55 AT Rifle"
   ]
-},
-{
+}, {
   "name": "Kingdom of Greece",
   "weight": 0.3333,
   "strikers": [
@@ -271,8 +262,7 @@ Data.Nations = [
     "M1919 Browning machine gun",
     "Schwarzlose MG M.07/12"
   ]
-},
-{
+}, {
   "name": "Kingdom of Hispania",
   "weight": 1,
   "strikers": [
@@ -286,8 +276,7 @@ Data.Nations = [
     "Mosin-Nagant",
     "vz. 24"
   ]
-},
-{
+}, {
   "name": "Imperial Karlsland",
   "weight": 15,
   "strikers": [
@@ -332,8 +321,7 @@ Data.Nations = [
     "Panzerbüchse Boyes",
     "PzB 39"
   ]
-},
-{
+}, {
   "name": "Kiwi",
   "weight": 2.5,
   "strikers": [
@@ -354,8 +342,7 @@ Data.Nations = [
     "Thompson SMG",
     "Boys .55 AT Rifle"
   ]
-},
-{
+}, {
   "name": "Orussian Empire",
   "weight": 2.5,
   "strikers": [
@@ -402,8 +389,7 @@ Data.Nations = [
     "PTRD-41",
     "PTRS-41"
   ]
-},
-{
+}, {
   "name": "Ostmark",
   "weight": 2.5,
   "strikers": [
@@ -434,8 +420,7 @@ Data.Nations = [
     "Solothurn 31M light MG",
     "Solothurn S-18/100"
   ]
-},
-{
+}, {
   "name": "Phillipines",
   "weight": 0.3333,
   "strikers": [
@@ -450,8 +435,7 @@ Data.Nations = [
     "Thompson SMG",
     "Type 38 rifle"
   ]
-},
-{
+}, {
   "name": "Romagna",
   "weight": 5,
   "strikers": [
@@ -481,8 +465,7 @@ Data.Nations = [
     "FM 24/29 light machine gun",
     "M1919 Browning machine gun"
   ]
-},
-{
+}, {
   "name": "South Africa",
   "weight": 2.5,
   "strikers": [
@@ -495,8 +478,7 @@ Data.Nations = [
     "M1919 Browning machine gun",
     "Sten"
   ]
-},
-{
+}, {
   "name": "Suomus",
   "weight": 5,
   "strikers": [
@@ -533,8 +515,7 @@ Data.Nations = [
     "Sten",
     "SVT-40"
   ]
-},
-{
+}, {
   "name": "United States of Liberion",
   "weight": 15,
   "strikers": [
@@ -584,8 +565,7 @@ Data.Nations = [
     "Boys .55 AT Rifle",
     "M18 recoilless"
   ]
-},
-{
+}, {
   "name": "Venezia",
   "weight": 1,
   "strikers": [
@@ -615,8 +595,7 @@ Data.Nations = [
     "FM 24/29 light machine gun",
     "M1919 Browning machine gun"
   ]
-}
-];
+}];
 
 Data.Familiars = [
   "Ankara Cat",
@@ -723,190 +702,144 @@ Data.Familiars = [
   "Zebra"
 ];
 
-Data.Personalities = [
-{
+Data.Personalities = [{
   "name": "Absent-minded",
   "weight": 1
-},
-{
+}, {
   "name": "Adamant",
   "weight": 1
-},
-{
+}, {
   "name": "Authoritative",
   "weight": 1
-},
-{
+}, {
   "name": "Bashful",
   "weight": 1
-},
-{
+}, {
   "name": "Bold",
   "weight": 1
-},
-{
+}, {
   "name": "Brave",
   "weight": 1
-},
-{
+}, {
   "name": "Calm",
   "weight": 1
-},
-{
+}, {
   "name": "Candid",
   "weight": 1
-},
-{
+}, {
   "name": "Careful",
   "weight": 1
-},
-{
+}, {
   "name": "Cheerful",
   "weight": 1
-},
-{
+}, {
   "name": "Conceited",
   "weight": 1
-},
-{
+}, {
   "name": "Curious",
   "weight": 1
-},
-{
+}, {
   "name": "Diplomatic",
   "weight": 1
-},
-{
+}, {
   "name": "Docile",
   "weight": 1
-},
-{
+}, {
   "name": "Empathic",
   "weight": 1
-},
-{
+}, {
   "name": "Gentle",
   "weight": 1
-},
-{
+}, {
   "name": "Hardy",
   "weight": 1
-},
-{
+}, {
   "name": "Hasty",
   "weight": 1
-},
-{
+}, {
   "name": "Impish",
   "weight": 1
-},
-{
+}, {
   "name": "Jolly",
   "weight": 1
-},
-{
+}, {
   "name": "Lax",
   "weight": 1
-},
-{
+}, {
   "name": "Lonely",
   "weight": 1
-},
-{
+}, {
   "name": "Mild",
   "weight": 1
-},
-{
+}, {
   "name": "Modest",
   "weight": 1
-},
-{
+}, {
   "name": "Naive",
   "weight": 1
-},
-{
+}, {
   "name": "Naughty",
   "weight": 1
-},
-{
+}, {
   "name": "Optimistic",
   "weight": 1
-},
-{
+}, {
   "name": "Perfectionist",
   "weight": 1
-},
-{
+}, {
   "name": "Pessimistic",
   "weight": 1
-},
-{
+}, {
   "name": "Quiet",
   "weight": 1
-},
-{
+}, {
   "name": "Quirky",
   "weight": 1
-},
-{
+}, {
   "name": "Rash",
   "weight": 1
-},
-{
+}, {
   "name": "Rebellious",
   "weight": 1
-},
-{
+}, {
   "name": "Relaxed",
   "weight": 1
-},
-{
+}, {
   "name": "Sassy",
   "weight": 1
-},
-{
+}, {
   "name": "Sensitive",
   "weight": 1
-},
-{
+}, {
   "name": "Serious",
   "weight": 1
-},
-{
+}, {
   "name": "Stoic",
   "weight": 1
-},
-{
+}, {
   "name": "Stubborn",
   "weight": 1
-},
-{
+}, {
   "name": "Timid",
   "weight": 1
 }];
 
-Data.Accessories = [
-{
+Data.Accessories = [{
   "name": "N/A",
   "weight": 75
-},
-{
+}, {
   "name": "Glasses",
   "weight": 5
-},
-{
+}, {
   "name": "Camera",
   "weight": 5
-},
-{
+}, {
   "name": "Full-length Pants",
   "weight": 5
-},
-{
+}, {
   "name": "Scarf",
   "weight": 5
-},
-{
+}, {
   "name": "Smokes",
   "weight": 5
 }];
