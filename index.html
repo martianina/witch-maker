@@ -10,8 +10,7 @@
         <meta name="description" content="Generate a random Strike Witch from any name">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/superhero.css">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -43,33 +42,28 @@
       </div>
     </div>
 
-    <div class="jumbotron">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Witch Generator</h1>
-            <p>If you were a Strike Witch, what kind of witch would you be? Enter your name below and find out.</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <form class="form-inline" role="form" id="generator">
-              <label for="name">Name</label><br>
-              <input class="form-control" name="name" id="inputName" type="text" value="Bob">
-              <button type="submit" class="btn btn-default">Generate</button>
-            </form>
-          </div>
-
-          <div class="col-md-6 hide" id="results">
-            <h2>Your Witch</h2>
-            <p></p>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>If you were a Strike Witch, what kind of witch would you be?</h3>
+          <form class="form-inline" role="form" id="generator">
+            <label for="name">Name</label><br>
+            <input class="form-control" name="name" id="inputName" type="text" value="Bob">
+            <button type="submit" class="btn btn-default">Generate</button>
+          </form>
         </div>
       </div>
-    </div>
 
-    <div class="container">
+      <div class="row result">
+        <div class="col-md-2">
+          <img src="img/silhouette.png" srcset="img/silhouette-2x.png 2x" alt="witch silhouette">
+        </div>
+        <div class="col-md-6 hide" id="results">
+          <h2>Your Witch</h2>
+          <p></p>
+        </div>
+      </div>
+
       <hr>
       <footer>
         <p>June 2015</p>
