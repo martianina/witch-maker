@@ -87,7 +87,7 @@
 
     return {
       accessories:   new WeightedList(source.Accessories),
-      familiars:     new WeightedList(arrayToObjects(source.Familiars)),
+      familiars:     new WeightedList(source.Familiars),
       nations:       new WeightedList(nations),
       personalities: new WeightedList(source.Personalities),
       strikers:      nationStrikers,
