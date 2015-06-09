@@ -125,6 +125,10 @@
             });
             $container.append(strikersList);
 
+            if (nation.strikers.length !== _.uniq(nation.strikers).length) {
+              console.warn("Non unique strikers for " + nation.name);
+            }
+
             $container.append($("<h4>Weapons ("+ nation.weapons.length +")</h4>"));
 
             var weaponsList = $("<ul></ul>");
@@ -135,6 +139,10 @@
               weaponsList.append($("<li></li>").append(link));
             });
             $container.append(weaponsList);
+
+            if (nation.weapons.length !== _.uniq(nation.weapons).length) {
+              console.warn("Non unique weapons for " + nation.name);
+            }
 
           });
         })();
@@ -207,7 +215,6 @@
           });
           $container.append(list);
         })();
-
 
       })();
     </script>

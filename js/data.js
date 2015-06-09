@@ -52,9 +52,8 @@ Data.Nations = [{
     "Sten",
     "Thompson SMG",
     "ZB vz. 26",
-    "Browning M1919",
+    "M1919 Browning machine gun",
     "Colt M/29",
-    "Hotchkiss M1914",
     "Hotchkiss M1914 machine gun",
     "Ksp m/36",
     "M/29",
@@ -120,7 +119,7 @@ Data.Nations = [{
     "Besa",
     "Bren LMG",
     "Hotchkiss M1922 machine gun",
-    "Lewis LMG",
+    "Lewis gun",
     "M1919 Browning machine gun",
     "M2 Browning",
     "Vickers",
@@ -195,7 +194,6 @@ Data.Nations = [{
     "Type 44",
     "Type 97",
     "Nambu Type 100",
-    "Type 2",
     "Type 1 HMG",
     "Type 11 LMG",
     "Type 3 HMG",
@@ -234,9 +232,9 @@ Data.Nations = [{
     "Thompson M1928",
     "Thompson SMG",
     "Bren LMG Mk1",
-    "FM-24/29",
-    "Hotchkiss M1914",
-    "Hotchkiss M1922",
+    "FM-24/29 light machine gun",
+    "Hotchkiss M1914 machine gun",
+    "Hotchkiss M1922 machine gun",
     "M1919 Browning machine gun",
     "Reibel Machine Gun",
     "Boys .55 AT Rifle"
@@ -304,11 +302,11 @@ Data.Nations = [{
     "vz. 33",
     "Erma EMP-35",
     "MP18/MP28",
-    "MP34",
-    "MP40",
+    "MP 34",
+    "MP 40",
     "Suomi KP/-31",
     "FM 24/29 light machine gun",
-    "MG08",
+    "MG 08",
     "MG131",
     "MG15",
     "MG151",
@@ -494,8 +492,8 @@ Data.Nations = [{
   "weapons": [
     "14mm pst kiv/37",
     "Carcano",
-    "DP-28",
-    "KP/-31",
+    "DP-28 LMG",
+    "Suomi KP/-31",
     "Lahti L-39",
     "LS/26",
     "M1918 Browning Automatic Rifle",
@@ -511,7 +509,7 @@ Data.Nations = [{
     "MG42",
     "Mosin-Nagant",
     "MP 18",
-    "PPS SMG",
+    "PPS submachine gun",
     "Sten",
     "SVT-40"
   ]
@@ -544,9 +542,8 @@ Data.Nations = [{
     "M1 Garand",
     "M1903 Springfield",
     "M1917 Browning Automatic Rifle",
-    "M1917 Enfield rifle",
+    "M1917 Enfield",
     "M1918 Browning Automatic Rifle",
-    "M1941 Johnson rifle",
     "Type 38 rifle",
     "M3/A1",
     "M50 Reising",
@@ -557,11 +554,11 @@ Data.Nations = [{
     "Thompson SMG",
     "United Defense M42",
     "Browning M1917A1 HMG",
-    "Browning M1919 MMG",
+    "M1919 Browning machine gun",
     "Browning M2 HMG",
     "Hotchkiss M1914 machine gun",
     "Lewis gun",
-    "M1941 Johnson",
+    "M1941 Johnson rifle",
     "Boys .55 AT Rifle",
     "M18 recoilless"
   ]
@@ -1144,14 +1141,6 @@ Data.Weapons = {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/M1917_Browning_machine_gun"
   },
-  "Browning M1919": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/M1919_Browning_machine_gun"
-  },
-  "Browning M1919 MMG": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/M1919_Browning_machine_gun"
-  },
   "Browning M2 HMG": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/M2_Browning"
@@ -1179,10 +1168,6 @@ Data.Weapons = {
   "Colt M/29": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/M1917_Browning_machine_gun"
-  },
-  "DP-28": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/Degtyaryov_machine_gun"
   },
   "DP-28 LMG": {
     "img": "",
@@ -1220,10 +1205,6 @@ Data.Weapons = {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/FM_24/29_light_machine_gun"
   },
-  "FM-24/29": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/FM_24/29_light_machine_gun"
-  },
   "Fiat-Revelli Modello 1914": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Fiat%E2%80%93Revelli_Modello_1914"
@@ -1244,17 +1225,9 @@ Data.Weapons = {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Gewehr_98"
   },
-  "Hotchkiss M1914": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/Hotchkiss_M1914_machine_gun"
-  },
   "Hotchkiss M1914 machine gun": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Hotchkiss_M1914_machine_gun"
-  },
-  "Hotchkiss M1922": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/Hotchkiss_M1922_machine_gun"
   },
   "Hotchkiss M1922 machine gun": {
     "img": "",
@@ -1263,10 +1236,6 @@ Data.Weapons = {
   "Jungle Carbine": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Jungle_Carbine"
-  },
-  "KP/-31": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/Suomi_KP/-31"
   },
   "Karabiner 98k": {
     "img": "",
@@ -1304,10 +1273,6 @@ Data.Weapons = {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Lee%E2%80%93Enfield"
   },
-  "Lewis LMG": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/Lewis_gun"
-  },
   "Lewis gun": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Lewis_gun"
@@ -1344,10 +1309,6 @@ Data.Weapons = {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/M1917_Enfield"
   },
-  "M1917 Enfield rifle": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/M1917_Enfield"
-  },
   "M1918 Browning Automatic Rifle": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/M1918_Browning_Automatic_Rifle"
@@ -1363,10 +1324,6 @@ Data.Weapons = {
   "M1931 SMG": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Suomi_KP/-31"
-  },
-  "M1941 Johnson": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/M1941_Johnson_rifle"
   },
   "M1941 Johnson rifle": {
     "img": "",
@@ -1420,10 +1377,6 @@ Data.Weapons = {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/MG_08"
   },
-  "MG08": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/MG_08"
-  },
   "MG131": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/MG_131_machine_gun"
@@ -1463,14 +1416,6 @@ Data.Weapons = {
   "MP18/MP28": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/MP_18"
-  },
-  "MP34": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/MP_34"
-  },
-  "MP40": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/MP_40"
   },
   "Madsen LMG": {
     "img": "",
@@ -1535,10 +1480,6 @@ Data.Weapons = {
   "PPD-40": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/PPD-40"
-  },
-  "PPS SMG": {
-    "img": "",
-    "href": "https://en.wikipedia.org/wiki/PPS_submachine_gun"
   },
   "PPS submachine gun": {
     "img": "",
