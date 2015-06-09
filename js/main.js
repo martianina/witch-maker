@@ -85,6 +85,9 @@
       nationWeapons[nation.name] = new WeightedList(arrayToObjects(nation.weapons));
     });
 
+    // Object table for striker images and wiki links
+    var strikerDetails = source.Strikers;
+
     // Object table for weapon images and wiki links
     var weaponDetails = source.Weapons;
 
@@ -94,6 +97,7 @@
       nations:       new WeightedList(nations),
       personalities: new WeightedList(source.Personalities),
       strikers:      nationStrikers,
+      strikerDetails: strikerDetails,
       weapons:       nationWeapons,
       weaponDetails: weaponDetails
     };
@@ -108,7 +112,12 @@
       var hash = new NameHash(given_name.toLowerCase());
 
       var nation      = this.data.nations.pick(hash.hash_index(0), 255);
-      var striker     = this.data.strikers[nation].pick(hash.hash_index(1), 255);
+      var strikerName = this.data.strikers[nation].pick(hash.hash_index(1), 255);
+      var striker     = {
+        name: strikerName,
+        href: this.data.strikerDetails[strikerName].href,
+        img: this.data.strikerDetails[strikerName].img
+      };
       var weaponName  = this.data.weapons[nation].pick(hash.hash_index(2), 255);
       var weapon      = {
         name: weaponName,
@@ -152,7 +161,7 @@
 
     $("#name").text(witch.name);
     $("#nation").text(witch.nation);
-    $("#striker").text(witch.striker);
+    $("#striker").html(linkify(witch.striker));
     $("#weapon").html(linkify(witch.weapon));
     $("#familiar").text(witch.familiar);
     $("#personality").text(witch.personality);
