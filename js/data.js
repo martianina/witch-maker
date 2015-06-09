@@ -1,7 +1,9 @@
 var Data = {};
 
 Data.Nations = [{
-  "name": "Australia",
+  "name": "Australis",
+  "href": "http://strikewitches.wikia.com/wiki/Australis",
+  "img": "",
   "weight": 5,
   "strikers": [
     "Brewster Buffalo B-339E",
@@ -25,6 +27,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "Baltland",
+  "href": "http://strikewitches.wikia.com/wiki/Baltland",
+  "img": "",
   "weight": 1,
   "strikers": [
     "Bristol Blenheim IV",
@@ -60,7 +64,9 @@ Data.Nations = [{
     "Madsen M/22"
   ]
 }, {
-  "name": "Belgium",
+  "name": "Belgica",
+  "href": "http://strikewitches.wikia.com/wiki/Belgica",
+  "img": "img/belgica.svg",
   "weight": 1,
   "strikers": [
     "Brewster B-339 Buffalo",
@@ -80,6 +86,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "Britannia",
+  "href": "http://strikewitches.wikia.com/wiki/Britannia",
+  "img": "img/britannia.svg",
   "weight": 15,
   "strikers": [
     "Brewster B-339E Buffalo",
@@ -127,7 +135,9 @@ Data.Nations = [{
     "Boys .55 AT Rifle"
   ]
 }, {
-  "name": "Bulgaria",
+  "name": "Moesia",
+  "href": "http://strikewitches.wikia.com/wiki/Moesia",
+  "img": "",
   "weight": 0.3333,
   "strikers": [
     "Dewoitine D.520",
@@ -143,7 +153,9 @@ Data.Nations = [{
     "Suomi KP/-31"
   ]
 }, {
-  "name": "Farawayland",
+  "name": "Faraway Land",
+  "href": "http://strikewitches.wikia.com/wiki/Faraway_Land",
+  "img": "",
   "weight": 5,
   "strikers": [
     "Boulton Paul Defiant",
@@ -174,6 +186,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "Fuso Empire",
+  "href": "http://strikewitches.wikia.com/wiki/Fuso",
+  "img": "img/fuso.svg",
   "weight": 15,
   "strikers": [
     "Kawanishi N1K2-J",
@@ -205,6 +219,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "Gallia",
+  "href": "http://strikewitches.wikia.com/wiki/Gallia",
+  "img": "img/gallia.svg",
   "weight": 5,
   "strikers": [
     "Arsenal VG39",
@@ -241,6 +257,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "Kingdom of Greece",
+  "href": "http://strikewitches.wikia.com/wiki/Greece",
+  "img": "",
   "weight": 0.3333,
   "strikers": [
     "Bloch MB.151",
@@ -262,6 +280,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "Kingdom of Hispania",
+  "href": "http://strikewitches.wikia.com/wiki/Hispania",
+  "img": "img/hispania.svg",
   "weight": 1,
   "strikers": [
     "Focke-Wulf Fw 190",
@@ -276,6 +296,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "Imperial Karlsland",
+  "href": "http://strikewitches.wikia.com/wiki/Karlsland",
+  "img": "img/karlsland.svg",
   "weight": 15,
   "strikers": [
     "Focke-Wulf Fw 190-6",
@@ -320,7 +342,9 @@ Data.Nations = [{
     "PzB 39"
   ]
 }, {
-  "name": "Kiwi",
+  "name": "Kiwiland",
+  "href": "http://strikewitches.wikia.com/wiki/Kiwiland",
+  "img": "",
   "weight": 2.5,
   "strikers": [
     "Brewster B-339E Buffalo",
@@ -342,6 +366,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "Orussian Empire",
+  "href": "http://strikewitches.wikia.com/wiki/Orussia",
+  "img": "img/orussia.svg",
   "weight": 2.5,
   "strikers": [
     "Bereznyak-Isayev BI-1",
@@ -389,6 +415,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "Ostmark",
+  "href": "http://strikewitches.wikia.com/wiki/Ostmark",
+  "img": "img/ostmark.svg",
   "weight": 2.5,
   "strikers": [
     "Fiat CR.42",
@@ -420,6 +448,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "Phillipines",
+  "href": "",
+  "img": "",
   "weight": 0.3333,
   "strikers": [
     "Boeing P-26 Peashooter"
@@ -435,6 +465,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "Romagna",
+  "href": "http://strikewitches.wikia.com/wiki/Romagna",
+  "img": "img/romagna.svg",
   "weight": 5,
   "strikers": [
     "Fiat CR.42",
@@ -465,6 +497,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "South Africa",
+  "href": "http://strikewitches.wikia.com/wiki/South_Africa",
+  "img": "",
   "weight": 2.5,
   "strikers": [
     "Curtiss P-36 Mohawk",
@@ -478,6 +512,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "Suomus",
+  "href": "http://strikewitches.wikia.com/wiki/Suomus",
+  "img": "img/suomus.svg",
   "weight": 5,
   "strikers": [
     "Brewster B-239 Buffalo",
@@ -515,6 +551,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "United States of Liberion",
+  "href": "http://strikewitches.wikia.com/wiki/Liberion",
+  "img": "img/liberion.svg",
   "weight": 15,
   "strikers": [
     "Brewster F2A Buffalo",
@@ -564,6 +602,8 @@ Data.Nations = [{
   ]
 }, {
   "name": "Venezia",
+  "href": "http://strikewitches.wikia.com/wiki/Venezia",
+  "img": "img/venezia.svg",
   "weight": 1,
   "strikers": [
     "Fiat CR.42",

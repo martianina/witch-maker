@@ -71,7 +71,9 @@
     var nations = _.collect(source.Nations, function (nation) {
       return {
           name:   nation.name,
-          weight: nation.weight
+          weight: nation.weight,
+          href: nation.href,
+          img: nation.img
       };
     });
 
@@ -95,6 +97,10 @@
       accessories:   new WeightedList(source.Accessories),
       familiars:     new WeightedList(source.Familiars),
       nations:       new WeightedList(nations),
+      nationDetails: _.reduce(nations, function(memo, nation) {
+        memo[nation.name] = nation;
+        return memo;
+      }, {}),
       personalities: new WeightedList(source.Personalities),
       strikers:      nationStrikers,
       strikerDetails: strikerDetails,
@@ -111,14 +117,19 @@
     generate: function (given_name) {
       var hash = new NameHash(given_name.toLowerCase());
 
-      var nation      = this.data.nations.pick(hash.hash_index(0), 255);
-      var strikerName = this.data.strikers[nation].pick(hash.hash_index(1), 255);
+      var nationName  = this.data.nations.pick(hash.hash_index(0), 255);
+      var nation      = {
+        name: nationName,
+        href: this.data.nationDetails[nationName].href,
+        img: this.data.nationDetails[nationName].img
+      };
+      var strikerName = this.data.strikers[nationName].pick(hash.hash_index(1), 255);
       var striker     = {
         name: strikerName,
         href: this.data.strikerDetails[strikerName].href,
         img: this.data.strikerDetails[strikerName].img
       };
-      var weaponName  = this.data.weapons[nation].pick(hash.hash_index(2), 255);
+      var weaponName  = this.data.weapons[nationName].pick(hash.hash_index(2), 255);
       var weapon      = {
         name: weaponName,
         href: this.data.weaponDetails[weaponName].href,
@@ -160,12 +171,18 @@
     $container.removeClass("hide");
 
     $("#name").text(witch.name);
-    $("#nation").text(witch.nation);
+    $("#nation").html(linkify(witch.nation));
     $("#striker").html(linkify(witch.striker));
     $("#weapon").html(linkify(witch.weapon));
     $("#familiar").text(witch.familiar);
     $("#personality").text(witch.personality);
     $("#accessories").text(witch.accessories);
+
+    if (witch.nation.img !== undefined && witch.nation.img !== "") {
+      $("#nationImg").prop('src', witch.nation.img).show();
+    } else {
+      $("#nationImg").prop('src', null).hide();
+    }
   };
 
   window.DisplayWitch = DisplayWitch;

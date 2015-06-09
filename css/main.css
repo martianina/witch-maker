@@ -11,3 +11,7 @@
   font-size: 1.2em;
   word-wrap: break-word;
 }
+
+#nationImg {
+  max-width: 100px;
+}
