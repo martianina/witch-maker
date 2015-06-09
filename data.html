@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Data View</title>
+        <meta name="description" content="Generate a random Strike Witch from any name">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/superhero.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="navbar navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Witch Generator</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li><a href="oldversion.html">Generator 1.0</a></li>
+            <li><a href="stats.html">Stats</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Contents</h1>
+          <ul>
+            <li>
+              <h4><a href="#nations">Nations</a></h4>
+              <ul id="nationsList"></ul>
+            </li>
+            <li>
+              <h4><a href="#familiars">Familiars</a></h4>
+            </li>
+            <li>
+              <h4><a href="#personalities">Personalities</a></h4>
+            </li>
+            <li>
+              <h4><a href="#accessories">Accessories</a></h4>
+            </li>
+            <li>
+              <h4><a href="#weapons">Weapons</a></h4>
+            </li>
+          </ul>
+
+          <div id="nations"></div>
+
+          <div id="familiars"></div>
+
+          <div id="personalities"></div>
+
+          <div id="accessories"></div>
+
+          <div id="weapons"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <hr>
+      <footer>
+        <p>June 2015</p>
+      </footer>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    <script src="js/data.js"></script>
+
+    <script>
+      (function() {
+        var sortedNations = _.sortBy(Data.Nations);
+        // Generate ToC for Nations
+        var $list = $("#nationsList");
+        sortedNations.forEach(function(nation) {
+          var link = $("<a></a>").prop('href', '#' + encodeURIComponent(nation.name));
+          link.html(nation.name);
+          $list.append($("<li></li>").append(link));
+        });
+
+        // Generate item for each nation
+        (function() {
+          var $container = $("#nations");
+          sortedNations.forEach(function(nation) {
+            var header = $("<h2></h2>")
+              .prop('id', encodeURIComponent(nation.name))
+              .html(nation.name);
+            $container.append(header);
+
+            var weightTag = $("<p></p>")
+              .append($("<strong></strong>").html("Weight:&nbsp;"))
+              .append(nation.weight);
+            $container.append(weightTag);
+
+            $container.append($("<h4>Strikers ("+ nation.strikers.length +")</h4>"));
+
+            var strikersList = $("<ul></ul>");
+            _.sortBy(nation.strikers).forEach(function(striker) {
+              var link = $("<a></a>")
+                .prop('href', '#' + encodeURIComponent(striker))
+                .html(striker);
+              strikersList.append($("<li></li>").append(link));
+            });
+            $container.append(strikersList);
+
+            $container.append($("<h4>Weapons ("+ nation.weapons.length +")</h4>"));
+
+            var weaponsList = $("<ul></ul>");
+            _.sortBy(nation.weapons).forEach(function(weapon) {
+              var link = $("<a></a>")
+                .prop('href', '#' + encodeURIComponent(weapon))
+                .html(weapon);
+              weaponsList.append($("<li></li>").append(link));
+            });
+            $container.append(weaponsList);
+
+          });
+        })();
+
+        // Generate item for each familiar
+        (function() {
+          var $container = $("#familiars");
+          $container.append($("<h2>Familiars</h2>"));
+
+          var list = $("<ul></ul>");
+          _.sortBy(Data.Familiars).forEach(function(familiar) {
+            var weightTag = $("<span></span>")
+              .addClass("text-muted")
+              .text(" (weight "+ familiar.weight +")");
+            list.append($("<li></li>").append(familiar.name, weightTag));
+          });
+          $container.append(list);
+        })();
+
+        // Generate item for each personality
+        (function() {
+          var $container = $("#personalities");
+          $container.append($("<h2>Personalities</h2>"));
+
+          var list = $("<ul></ul>");
+          _.sortBy(Data.Personalities).forEach(function(personality) {
+            var weightTag = $("<span></span>")
+              .addClass("text-muted")
+              .text(" (weight "+ personality.weight +")");
+            list.append($("<li></li>").append(personality.name, weightTag));
+          });
+          $container.append(list);
+        })();
+
+        // Generate item for each accessory
+        (function() {
+          var $container = $("#accessories");
+          $container.append($("<h2>Accessories</h2>"));
+
+          var list = $("<ul></ul>");
+          _.sortBy(Data.Accessories).forEach(function(accessory) {
+            var weightTag = $("<span></span>")
+              .addClass("text-muted")
+              .text(" (weight "+ accessory.weight +")");
+            list.append($("<li></li>").append(accessory.name, weightTag));
+          });
+          $container.append(list);
+        })();
+
+        // Generate item for each weapon
+        (function() {
+          var $container = $("#weapons");
+          $container.append($("<h2>Weapons</h2>"));
+
+          var list = $("<ul></ul>");
+          _.chain(Data.Weapons).keys().sortBy().each(function(key) {
+            var weapon = Data.Weapons[key];
+            var linkTag = null;
+            if (weapon.href !== "") {
+              linkTag = $("<a></a>")
+                .prop('href', weapon.href)
+                .html("Wiki Link");
+            }
+
+            var nameTag = $("<span></span>")
+              .prop('id', encodeURIComponent(key))
+              .html(key);
+
+            list.append($("<li></li>").append(nameTag, "<br>", linkTag));
+          });
+          $container.append(list);
+        })();
+
+
+      })();
+    </script>
+
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-22322741-4');ga('send','pageview');
+    </script>
+    </body>
+</html>
