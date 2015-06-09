@@ -85,13 +85,17 @@
       nationWeapons[nation.name] = new WeightedList(arrayToObjects(nation.weapons));
     });
 
+    // Object table for weapon images and wiki links
+    var weaponDetails = source.Weapons;
+
     return {
       accessories:   new WeightedList(source.Accessories),
       familiars:     new WeightedList(source.Familiars),
       nations:       new WeightedList(nations),
       personalities: new WeightedList(source.Personalities),
       strikers:      nationStrikers,
-      weapons:       nationWeapons
+      weapons:       nationWeapons,
+      weaponDetails: weaponDetails
     };
   };
 
@@ -105,7 +109,12 @@
 
       var nation      = this.data.nations.pick(hash.hash_index(0), 255);
       var striker     = this.data.strikers[nation].pick(hash.hash_index(1), 255);
-      var weapon      = this.data.weapons[nation].pick(hash.hash_index(2), 255);
+      var weaponName  = this.data.weapons[nation].pick(hash.hash_index(2), 255);
+      var weapon      = {
+        name: weaponName,
+        href: this.data.weaponDetails[weaponName].href,
+        img: this.data.weaponDetails[weaponName].img
+      };
       var familiar    = this.data.familiars.pick(hash.hash_index(3), 255);
       var personality = this.data.personalities.pick(hash.hash_index(4), 255);
       var accessory   = this.data.accessories.pick(hash.hash_index(5), 255);
@@ -127,13 +136,24 @@
 
 /* Output rendering code */
 (function() {
+  var linkify = function (item) {
+    if (item.href !== undefined && item.href !== "") {
+      return $("<a></a>")
+        .attr("href", item.href)
+        .attr("target", "_blank")
+        .text(item.name);
+    } else {
+      return item.name;
+    }
+  };
+
   var DisplayWitch = function ($container, witch) {
     $container.removeClass("hide");
 
     $("#name").text(witch.name);
     $("#nation").text(witch.nation);
     $("#striker").text(witch.striker);
-    $("#weapon").text(witch.weapon);
+    $("#weapon").html(linkify(witch.weapon));
     $("#familiar").text(witch.familiar);
     $("#personality").text(witch.personality);
     $("#accessories").text(witch.accessories);
