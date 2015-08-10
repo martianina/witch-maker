@@ -183,6 +183,12 @@
     } else {
       $("#nationImg").prop('src', null).hide();
     }
+
+    if (witch.striker.img !== undefined && witch.striker.img !== "") {
+      $("#strikerImg").prop('src', witch.striker.img).show();
+    } else {
+      $("#strikerImg").prop('src', null).hide();
+    }
   };
 
   window.DisplayWitch = DisplayWitch;

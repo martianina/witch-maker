@@ -1697,7 +1697,7 @@ Data.Weapons = {
 
 Data.Strikers = {
   "Arsenal VG39": {
-    "img": "",
+    "img": "img/strikers/VG.39bis.jpg",
     "href": "https://en.wikipedia.org/wiki/Arsenal_VG-33"
   },
   "Bereznyak-Isayev BI-1": {
@@ -1725,23 +1725,23 @@ Data.Strikers = {
     "href": "https://en.wikipedia.org/wiki/Boulton_Paul_Defiant"
   },
   "Brewster B-239 Buffalo": {
-    "img": "",
+    "img": "img/strikers/F2A Buffalo.jpg",
     "href": "https://en.wikipedia.org/wiki/Brewster_F2A_Buffalo"
   },
   "Brewster B-339 Buffalo": {
-    "img": "",
+    "img": "img/strikers/F2A Buffalo.jpg",
     "href": "https://en.wikipedia.org/wiki/Brewster_F2A_Buffalo"
   },
   "Brewster B-339E Buffalo": {
-    "img": "",
+    "img": "img/strikers/F2A Buffalo.jpg",
     "href": "https://en.wikipedia.org/wiki/Brewster_F2A_Buffalo"
   },
   "Brewster Buffalo B-339E": {
-    "img": "",
+    "img": "img/strikers/F2A Buffalo.jpg",
     "href": "https://en.wikipedia.org/wiki/Brewster_F2A_Buffalo"
   },
   "Brewster F2A Buffalo": {
-    "img": "",
+    "img": "img/strikers/F2A Buffalo.jpg",
     "href": "https://en.wikipedia.org/wiki/Brewster_F2A_Buffalo"
   },
   "Bristol Beaufighter": {
@@ -1845,15 +1845,15 @@ Data.Strikers = {
     "href": "https://en.wikipedia.org/wiki/Fiat_CR.42"
   },
   "Fiat G.50": {
-    "img": "",
+    "img": "img/strikers/G50.jpg",
     "href": "https://en.wikipedia.org/wiki/Fiat_G.50"
   },
   "Fiat G.55 Centauro": {
-    "img": "",
+    "img": "img/strikers/G55.jpg",
     "href": "https://en.wikipedia.org/wiki/Fiat_G.55"
   },
   "Fiat G50": {
-    "img": "",
+    "img": "img/strikers/G50.jpg",
     "href": "https://en.wikipedia.org/wiki/Fiat_G.50"
   },
   "Focke-Wulf Fw 190": {
@@ -1889,7 +1889,7 @@ Data.Strikers = {
     "href": "https://en.wikipedia.org/wiki/Grumman_F6F_Hellcat"
   },
   "Grumman/General Motors F4F/FM Wildcat": {
-    "img": "",
+    "img": "img/strikers/F4F.jpg",
     "href": "https://en.wikipedia.org/wiki/Grumman_F4F_Wildcat"
   },
   "Hawker Hurricane": {
@@ -1945,11 +1945,11 @@ Data.Strikers = {
     "href": "https://en.wikipedia.org/wiki/Ilyushin_Il-2"
   },
   "Junkers Ju 87 (StuKa)": {
-    "img": "",
+    "img": "img/strikers/ju87-b.jpg",
     "href": "https://en.wikipedia.org/wiki/Junkers_Ju_87"
   },
   "Junkers Ju 88": {
-    "img": "",
+    "img": "img/strikers/Ju-88C-6.jpg",
     "href": "https://en.wikipedia.org/wiki/Junkers_Ju_88"
   },
   "Kawanishi N1K2-J": {
@@ -1997,7 +1997,7 @@ Data.Strikers = {
     "href": "https://en.wikipedia.org/wiki/Macchi_C.202"
   },
   "Macchi MC.205": {
-    "img": "",
+    "img": "img/strikers/MC.205.jpg",
     "href": "https://en.wikipedia.org/wiki/Macchi_C.205"
   },
   "Messerschmitt Bf 109": {
@@ -2009,7 +2009,7 @@ Data.Strikers = {
     "href": "https://en.wikipedia.org/wiki/Messerschmitt_Bf_109_variants#Bf_109E"
   },
   "Messerschmitt Bf 109F-4": {
-    "img": "",
+    "img": "img/strikers/Bf109F-4.jpg",
     "href": "https://en.wikipedia.org/wiki/Messerschmitt_Bf_109_variants#F-3.2C_F-4.2C_F-5.2C_F-6"
   },
   "Messerschmitt Bf 109G": {
@@ -2073,7 +2073,7 @@ Data.Strikers = {
     "href": "https://en.wikipedia.org/wiki/Nakajima_Ki-44"
   },
   "Nakajima Ki-79": {
-    "img": "",
+    "img": "img/strikers/Nakajima Ki-27.jpg",
     "href": "https://en.wikipedia.org/wiki/Nakajima_Ki-27#Variants"
   },
   "Nakajima Ki-84 Hayate": {
@@ -2085,7 +2085,7 @@ Data.Strikers = {
     "href": "https://en.wikipedia.org/wiki/North_American_P-51_Mustang_variants#Mustang_Mk_I_.28NA-73.29"
   },
   "North American P-51 Mustang Mk III": {
-    "img": "",
+    "img": "img/strikers/P-51B.jpg",
     "href": "https://en.wikipedia.org/wiki/North_American_P-51_Mustang_variants#P-51B_and_P-51C"
   },
   "North American P-51 Mustang Mk IVA": {
@@ -2093,7 +2093,7 @@ Data.Strikers = {
     "href": "https://en.wikipedia.org/wiki/North_American_P-51_Mustang_variants#P-51D_and_P-51K"
   },
   "North American P-51D Mustang": {
-    "img": "",
+    "img": "img/strikers/P-51D.jpg",
     "href": "https://en.wikipedia.org/wiki/North_American_P-51_Mustang"
   },
   "North American P-64": {
@@ -2105,7 +2105,7 @@ Data.Strikers = {
     "href": "https://en.wikipedia.org/wiki/Northrop_P-61_Black_Widow"
   },
   "P-51D Mustang": {
-    "img": "",
+    "img": "img/strikers/P-51D.jpg",
     "href": "https://en.wikipedia.org/wiki/North_American_P-51_Mustang"
   },
   "Petlyakov Pe-3": {
@@ -2125,7 +2125,7 @@ Data.Strikers = {
     "href": "https://en.wikipedia.org/wiki/Reggiane_Re.2000"
   },
   "Reggiane Re.2001": {
-    "img": "",
+    "img": "img/strikers/RE2001 CB.jpg",
     "href": "https://en.wikipedia.org/wiki/Reggiane_Re.2001"
   },
   "Reggiane Re.2005": {
