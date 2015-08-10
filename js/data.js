@@ -135,6 +135,48 @@ Data.Nations = [{
     "Boys .55 AT Rifle"
   ]
 }, {
+  "name": "Dacia",
+  "href": "http://strikewitches.wikia.com/wiki/Dacia",
+  "img": "img/dacia.svg",
+  "weight": 1,
+  "strikers": [
+    "Bloch MB.151",
+    "Focke-Wulf Fw 190",
+    "Heinkel He 112",
+    "IAR 80",
+    "Messerschmitt Bf 109",
+    "Messerschmitt Bf 110",
+    "Potez 630",
+    "Heinkel He 111",
+    "Junkers Ju 88",
+    "PZL.37 Łoś",
+    "Savoia-Marchetti SM.79",
+    "IAR 37/38/39",
+    "PZL.23/43 Karaś",
+    "Fieseler Fi 167",
+    "Focke-Wulf Fw 189",
+    "Lublin R-XIII",
+    "RWD-14 Czapla",
+    "Heinkel He 114"
+  ],
+  "weapons": [
+    "Steyr-Mannlicher M.93",
+    "vz. 24",
+    "Mauser Karabiner 98k",
+    "Mosin–Nagant",
+    "Orita M1941",
+    "PPSh-41",
+    "MP 40",
+    "Moschetto Automatico Beretta 1938",
+    "Eugen-42",
+    "Luk-28",
+    "ZB vz. 26",
+    "ZB-30",
+    "MG34",
+    "Maxim PM1910 Medium Machine Gun",
+    "ZB-53"
+  ]
+}, {
   "name": "Moesia",
   "href": "http://strikewitches.wikia.com/wiki/Moesia",
   "img": "",
@@ -1237,6 +1279,10 @@ Data.Weapons = {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Erma_EMP"
   },
+  "Eugen-42": {
+    "img": "",
+    "href": ""
+  },
   "FG-42": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/FG_42"
@@ -1316,6 +1362,10 @@ Data.Weapons = {
   "Lewis gun": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Lewis_gun"
+  },
+  "Luk-28": {
+    "img": "",
+    "href": ""
   },
   "M/29": {
     "img": "",
@@ -1509,6 +1559,10 @@ Data.Weapons = {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Type_100_submachine_gun"
   },
+  "Orita M1941": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/Orita_M1941"
+  },
   "OVP": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Beretta_OVP"
@@ -1584,6 +1638,10 @@ Data.Weapons = {
   "Sten": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Sten"
+  },
+  "Steyr-Mannlicher M.93": {
+    "img": "",
+    "href": ""
   },
   "Suomi KP/-31": {
     "img": "",
@@ -1692,6 +1750,14 @@ Data.Weapons = {
   "vz. 33": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Vz._33"
+  },
+  "ZB-30": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/ZB-30"
+  },
+  "ZB-53": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/ZB-53"
   }
 };
 
@@ -1852,6 +1918,14 @@ Data.Strikers = {
     "img": "img/strikers/G55.jpg",
     "href": "https://en.wikipedia.org/wiki/Fiat_G.55"
   },
+  "Fieseler Fi 167": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/Fieseler_Fi_167"
+  },
+  "Focke-Wulf Fw 189": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/Focke-Wulf_Fw_189"
+  },
   "Focke-Wulf Fw 190": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Focke-Wulf_Fw_190"
@@ -1920,9 +1994,17 @@ Data.Strikers = {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Hawker_Tempest"
   },
+  "Heinkel He 111": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/Heinkel_He_111"
+  },
   "Heinkel He 112": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Heinkel_He_112"
+  },
+  "Heinkel He 114": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/Heinkel_He_114"
   },
   "Heinkel He 162": {
     "img": "",
@@ -1931,6 +2013,14 @@ Data.Strikers = {
   "Heinkel He 219": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Heinkel_He_219"
+  },
+  "IAR 37": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/IAR_37"
+  },
+  "IAR 80": {
+    "img": "img/strikers/IAR 80.jpg",
+    "href": "https://en.wikipedia.org/wiki/IAR_80"
   },
   "Ilyushin Il-10": {
     "img": "",
@@ -1983,6 +2073,10 @@ Data.Strikers = {
   "Lockheed P-80 Shooting Star": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Lockheed_P-80_Shooting_Star"
+  },
+  "Lublin R-XIII": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/Lublin_R-XIII"
   },
   "Macchi MC.200": {
     "img": "",
@@ -2108,6 +2202,18 @@ Data.Strikers = {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Polikarpov_I-185"
   },
+  "Potez 630": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/Potez_630"
+  },
+  "PZL.23/43 Karaś": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/PZL.23_Kara%C5%9B"
+  },
+  "PZL.37 Łoś": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/PZL.37_%C5%81o%C5%9B"
+  },
   "Reggiane Re.2000": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Reggiane_Re.2000"
@@ -2132,9 +2238,17 @@ Data.Strikers = {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Republic_P-47_Thunderbolt"
   },
+  "RWD-14 Czapla": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/RWD-14_Czapla"
+  },
   "Ryan FR Fireball": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Ryan_FR_Fireball"
+  },
+  "Savoia-Marchetti SM.79": {
+    "img": "",
+    "href": "https://en.wikipedia.org/wiki/Savoia-Marchetti_SM.79"
   },
   "Seversky EP-1 (P-35)": {
     "img": "",
