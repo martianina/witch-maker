@@ -14,7 +14,7 @@ Data.Nations = [{
     "Curtiss P-40 Kittyhawk",
     "de Havilland Mosquito",
     "Fairey Firefly",
-    "P-51D Mustang",
+    "North American P-51D Mustang",
     "Supermarine Spitfire Mk VIII"
   ],
   "weapons": [
@@ -522,7 +522,7 @@ Data.Nations = [{
     "Messerschmitt Bf 109G-2",
     "Messerschmitt Bf 109",
     "Morane-Saulnier M.S.406",
-    "Fiat G50",
+    "Fiat G.50",
     "VL Myrsky"
   ],
   "weapons": [
@@ -1852,10 +1852,6 @@ Data.Strikers = {
     "img": "img/strikers/G55.jpg",
     "href": "https://en.wikipedia.org/wiki/Fiat_G.55"
   },
-  "Fiat G50": {
-    "img": "img/strikers/G50.jpg",
-    "href": "https://en.wikipedia.org/wiki/Fiat_G.50"
-  },
   "Focke-Wulf Fw 190": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Focke-Wulf_Fw_190"
@@ -2103,10 +2099,6 @@ Data.Strikers = {
   "Northrop P-61 Black Widow": {
     "img": "",
     "href": "https://en.wikipedia.org/wiki/Northrop_P-61_Black_Widow"
-  },
-  "P-51D Mustang": {
-    "img": "img/strikers/P-51D.jpg",
-    "href": "https://en.wikipedia.org/wiki/North_American_P-51_Mustang"
   },
   "Petlyakov Pe-3": {
     "img": "",
